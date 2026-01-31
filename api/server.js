@@ -1,12 +1,11 @@
-import express from 'express';
-
-import { Prisma, PrismaClient } from '@prisma/client';
-
+import cors from 'cors'
+import express from 'express'
+import { Prisma, PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
-
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 const users = [];
 
@@ -87,16 +86,11 @@ app.get('/users', async (req, res) => {
         age: req.query.age
       }
     })
-
-
   }else{
      const users = await prisma.user.findMany()
 
   }
   //console.log(req)
-
- 
-
   res.status(200).json(users)
 }); */
 

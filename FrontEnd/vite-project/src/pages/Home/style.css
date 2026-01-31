@@ -1,0 +1,155 @@
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Corpo */
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #363467 0%, rgba(30, 29, 79, 0.8) 100%);
+  text-align: center;
+}
+
+/* Container principal */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #2E2D4E;
+  max-width: 50%;
+  width: 400px;
+  margin-bottom: 20px;
+  color: #ffff;
+  font-size: 14px;
+
+  & button {
+    border-radius: 30px;
+    background-color: #8B8AE1;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  & input {
+    border: 1px solid #48456C;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #363653;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2E2D4E;
+  margin: 10px;
+  padding: 10px 15px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* texto dentro do card */
+.card p {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* span dos valores */
+.card p span {
+  font-size: small;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+/* botão do card */
+.card>button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ícone */
+.card>button img {
+  background: none;
+}
+
+.card>div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*esquerda */
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+.card>div:first-child p {
+  margin: 2px 0;
+  text-align: left;
+}
+
+/* ----- BOTÃO ATUALIZAR ----- */
+#update-btn {
+  border-radius: 30px;
+  background-color: #8B8AE1;
+  /* mesmo tom do botão Cadastrar */
+  color: white;
+  /* mesma cor do texto */
+  height: 40px;
+  /* mesma altura do botão Cadastrar */
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 20px;
+  /* largura confortável */
+  margin-bottom: 20px;
+}
+
+#update-btn:hover {
+  background-color: #7a78d9;
+  /* hover leve, consistente com Cadastrar */
+}
+
+/* ----- BOTÃO EDITAR ----- */
+.edit-btn {
+  background: none;
+  /* transparente para não mexer no card */
+  border: none;
+  color: #fff;
+  /* mesma cor usada no texto dos cards */
+  font-weight: bold;
+  /* mesmo peso do botão Cadastrar */
+  font-family: "Poppins", sans-serif;
+  /* mesma fonte */
+  cursor: pointer;
+  text-decoration: underline;
+  /* deixa parecido com link, discreto */
+}
+
+.edit-btn:hover {
+  color: #8B8AE1;
+  /* muda para cor de destaque quando passar mouse */
+}
